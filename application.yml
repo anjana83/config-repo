@@ -26,14 +26,7 @@ application:
   domain: ${APPLICATION_DOMAIN:cfapps.io}
 endpoints:
   restart: enabled
-eureka:
-  password: password
-  instance:
-    hostname: ${PREFIX:}${spring.application.name}.${application.domain:cfapps.io}
-    nonSecurePort: 80
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+
 
 ---
 spring:
